@@ -773,7 +773,8 @@ footer{
     background:#232324;
     z-index:1;
     position:relative;
-    text-align:center
+    text-align:center;
+    overflow: hidden;
 }
 footer li a{
     color:#313131;

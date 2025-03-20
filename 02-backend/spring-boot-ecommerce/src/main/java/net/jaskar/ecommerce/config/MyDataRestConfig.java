@@ -2,10 +2,7 @@ package net.jaskar.ecommerce.config;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
-import net.jaskar.ecommerce.entity.Country;
-import net.jaskar.ecommerce.entity.Product;
-import net.jaskar.ecommerce.entity.ProductCategory;
-import net.jaskar.ecommerce.entity.State;
+import net.jaskar.ecommerce.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -41,6 +38,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         disableHttpMethods(ProductCategory.class, config, theUnsupportedActions);
         disableHttpMethods(Country.class, config, theUnsupportedActions);
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
 
         // call an internal helper method
         exposeIds(config);
